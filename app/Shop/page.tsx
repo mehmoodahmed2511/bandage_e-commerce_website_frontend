@@ -30,11 +30,11 @@ export default function Shop() {
                         </div>
                     </div><br />
                     <div id="shop-images" className="flex justify-center gap-3">
-                        <img className="w-52 hover:drop-shadow-xl cursor-pointer" src="/shop/1.jpg" alt="" />
-                        <img className="w-52 hover:drop-shadow-xl cursor-pointer" src="/shop/2.jpg" alt="" />
-                        <img className="w-52 hover:drop-shadow-xl cursor-pointer" src="/shop/3.jpg" alt="" />
-                        <img className="w-52 hover:drop-shadow-xl cursor-pointer" src="/shop/4.jpg" alt="" />
-                        <img className="w-52 hover:drop-shadow-xl cursor-pointer" src="/shop/5.jpg" alt="" />
+                        <img className="w-52 hover:drop-shadow-xl cursor-pointer" src="/shop/1.png" alt="" />
+                        <img className="w-52 hover:drop-shadow-xl cursor-pointer" src="/shop/2.png" alt="" />
+                        <img className="w-52 hover:drop-shadow-xl cursor-pointer" src="/shop/3.png" alt="" />
+                        <img className="w-52 hover:drop-shadow-xl cursor-pointer" src="/shop/4.png" alt="" />
+                        <img className="w-52 hover:drop-shadow-xl cursor-pointer" src="/shop/5.png" alt="" />
                     </div>
                 </div>
 

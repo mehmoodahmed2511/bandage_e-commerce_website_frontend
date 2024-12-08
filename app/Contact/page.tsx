@@ -12,9 +12,9 @@ export default function Contact(){
                     <p className="text-gray-500">We know how large objects will act,  <br />but things on a small scale</p><br />
                     <h1 className="font-bold">Phone: +451 215 215</h1>
                     <h1 className="font-bold">Fax: +451 215 215</h1><br />
-                    <img className="w-40" src="/contact/logos.jpg" alt="" />
+                    <img className="w-40" src="/contact/logos.png" alt="" />
                 </div>
-                <img className="" src="/contact/background.jpg" width={480} alt="" />
+                <img className="" src="/contact/background.png" width={480} alt="" />
             </div>
 
             <p className="font-bold text-gray-600 text-center mb-4">VISIT OUR OFFICE</p>
@@ -48,7 +48,7 @@ export default function Contact(){
             </div>
 
             <div className="flex flex-col justify-center items-center gap-4 my-20">
-            <img className="w-16" src="/contact/arrow.jpg" alt="" />
+            <img className="w-16" src="/contact/arrow.png" alt="" />
             <p className="font-bold text-gray-500">WE Can't WAIT TO MEET YOU</p>
             <h1 className="font-bold text-4xl">Let's Talk</h1>
             <button className="px-7 py-2 rounded-sm bg-sky-500 text-white text-xs">Try it free now</button>

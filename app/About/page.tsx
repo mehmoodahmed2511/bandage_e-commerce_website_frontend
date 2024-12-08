@@ -18,7 +18,7 @@ export default function About() {
                         <button className="px-8 py-2 rounded md bg-sky-500 text-white text-sm ">Get Quote Now</button>
                     </div>
 
-                    <img src="/about/background.jpg" width={480} alt="" />
+                    <img src="/about/background.png" width={480} alt="" />
                 </div>
 
                 <p className="text-red-500 mt-20">Problems Trying</p><br />
@@ -60,7 +60,7 @@ export default function About() {
                                     <img className="w-68" src={`${box.image}`} alt="" /><br />
                                     <p className="font-bold text-center text-sm">Username</p>
                                     <p className="text-xs text-gray-500 text-center font-bold my-2">Profession</p>
-                                    <img className="mx-auto w-24" src="/about/logos.jpg" alt="" />
+                                    <img className="mx-auto w-24" src="/about/logos.png" alt="" />
                                 </div>
                             ))
                         }
@@ -71,7 +71,7 @@ export default function About() {
             <div id="big-companies"  className="py-20 bg-gray-100">
                     <h1 className="text-3xl font-bold text-center">Big Companies Are Here</h1><br />
                     <p className="text-gray-500 text-center">Problems trying to resolve the conflict between <br /> the two major realms of Classical physics: Newtonian mechanics </p><br /><br />
-                    <img className="w-full" src="/about/logos div.jpg" alt="" />
+                    <img className="w-full" src="/about/logos div.png" alt="" />
                 </div>
 
                 <div className="flex">
