@@ -58,7 +58,7 @@ export default function Shop() {
                 </div>
 
                 <div id="logos" className="flex justify-center gap-24 py-10 bg-gray-100">
-                    <img className="h-8" src="/shop/logos/1.png" alt="" />
+                    <img className="h-8" src="/shop/logos /1.png" alt="" />
                     <img className="h-10" src="/shop/logos/2.png" alt="" />
                     <img className="h-11" src="/shop/logos/3.png" alt="" />
                     <img className="h-8" src="/shop/logos/4.png" alt="" />

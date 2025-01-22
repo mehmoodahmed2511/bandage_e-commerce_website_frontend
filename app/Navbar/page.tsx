@@ -7,12 +7,12 @@ export default function Navbar() {
     return (
         <>
 
-            <div id="navbar" className="lg:p-4 lg:flex justify-center gap-36 items-center">
+            <div id="navbar" className="p-4 lg:flex justify-center gap-36 items-center">
                 
                     <h1 className="text-2xl"><b>Bandage</b></h1>
 
                     <div id="hamburger-part" className="flex gap-6 text-md font-bold">
-                        <div id="links" className="flex flex-col items-center gap-7 font-semibold text-base  text-gray-500 font-[Heebo] p-4 lg:flex-row">
+                        <div id="links" className="flex flex-row items-center gap-7 font-semibold text-base  text-gray-500 font-[Heebo] p-4">
                             <Link href="/Home" id="link">Home</Link>
                             <Link href="/Shop" id="link">Shop</Link>
                             <Link href="/About" id="link">About</Link>

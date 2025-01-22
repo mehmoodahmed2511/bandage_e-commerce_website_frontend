@@ -6,7 +6,7 @@ export default function Footer(){
         
         <img className="mt-32" src="bandage.jpg" alt="" />
 
-<footer className="flex justify-center gap-20 px-40 py-16">
+<footer className="flex justify-center  gap-20 px-40 py-16 sm:gap-5 sm:grid sm:grid-cols-0 sm:px-14">
     <div className="flex flex-col items-start gap-4  text-xs">
         <h1 className="text-sm font-bold">Company Info</h1>
         <h1 className="font-bold text-gray-500">About Us</h1>
@@ -39,7 +39,7 @@ export default function Footer(){
         <h1 className="font-bold text-gray-500">API</h1>
     </div>
 
-    <div className="flex flex-col items-start gap-4 text-xs">
+    <div className="flex flex-col items-start gap-4 text-xs xs:flex-row xs:col-span-8">
         <h1 className="text-sm font-bold">Get In Touch</h1>
         <div className="flex">
             <input className="border-none bg-gray-100 px-3 text-xs" type="text" placeholder="Your Email" />
@@ -48,7 +48,7 @@ export default function Footer(){
         <p className="text-xs text-gray-500">Lorem ipsum dolor Amit</p>
     </div>
 </footer>
-<div className="text-gray-600 bg-gray-100 font-bold text-start px-44 py-6 text-xs">Made With Love By Finland All Right Reserved </div>
+<div className="text-gray-600 bg-gray-100 font-bold text-start px-44 py-6 text-xs xs:px-20 xs:text-center ">Made With Love By Finland All Right Reserved </div>
         </>
     )
 }

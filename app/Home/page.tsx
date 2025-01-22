@@ -1,8 +1,34 @@
+"use client"
+import { client } from "@/sanity/lib/client"
+import { useState, useEffect } from 'react'
 import Footer from "@/app/Footer/page"
+
+
+type Product = {
+    title: string;
+    description: string;
+    productImage: string;
+    price: number;
+    tags: string[];
+    discountPercentage: number;
+    isNew: boolean;
+};
 
 export default function Home() {
 
-    //Editor's Pick data
+    const [product, setProduct] = useState<Product[]>([]);
+    const fetchData = async () => {
+        const getData = await client.fetch(`*[_type=='product']{title, description, productImage, price, tags, discountPercentage, isNew}`);
+        setProduct(getData);
+
+        useEffect(() => {
+            fetchData();
+        }, []);
+        console.log(product);
+    }
+
+
+
     const editors_pick = [
         {
             image: "/men.jpeg",
@@ -45,10 +71,10 @@ export default function Home() {
 
                 <div id="new-collection" className="relative">
                     <img src="/front image.png" alt="" />
-                    <div id="text" className="absolute inset-0 mt-[17%] ml-[10%] text-white">
+                    <div id="text" className="absolute inset-0 mt-[17%] ml-[10%] text-white ">
                         <p>SUMMER 2020</p><br />
                         <h1 className="font-bold text-6xl">NEW COLLECTION</h1><br />
-                        <p>We know how large objects will act, <br />but things on a small scale.</p><br />
+                        <p >We know how large objects will act, <br />but things on a small scale.</p><br />
                         <button className="px-4 py-2 rounded-md bg-green-500 font-bold text-lg">SHOP NOW</button>
                     </div>
                 </div>
@@ -67,6 +93,7 @@ export default function Home() {
                             ))
                         }
                     </div>
+
                 </div>
 
 
@@ -76,9 +103,7 @@ export default function Home() {
                     <p className="text-center text-gray-600">Problems trying to resolve the conflict between</p>
 
 
-
-
-                    <div className="grid size-8/12 grid-cols-4 mx-auto p-10">
+                    {/* <div className="grid size-8/12 grid-cols-4 mx-auto p-10">
                         {featured_products.map((box, index) => (
 
                             <div id="box" className="text-center w-50 h-80 mx-2 my-14 ">
@@ -98,28 +123,59 @@ export default function Home() {
                             </div>
                         ))
                         }
-                    </div>
+                    </div> */}
+
+                    {product.length > 0 ?
+                        (
+
+                            <div className="grid size-8/12 grid-cols-4 mx-auto p-10">
+                                {product.map((box:any, index:any) => (
+
+                                    <div id="box" className="text-center w-50 h-80 mx-2 my-14 ">
+                                        <img src={`${box.productImage}`} className="object-cover cursor-pointer hover:drop-shadow-lg " alt="" />
+                                        <div id="text" className="flex flex-col gap-2 mt-4">
+                                            <h1 className="font-bold">{box.title}</h1>
+                                            <p className="text-gray-700 text-xs">English Department</p>
+                                            <h1 className="text-gray-400 text-sm">$16.48 <span className="text-green-800 text-bold">$6.48</span>
+                                            </h1>
+                                            <div id="circles" className="flex justify-center gap-1">
+                                                <div className="h-3 w-3 rounded-full bg-sky-500"></div>
+                                                <div className="h-3 w-3 rounded-full bg-green-600"></div>
+                                                <div className="h-3 w-3 rounded-full bg-orange-500"></div>
+                                                <div className="h-3 w-3 rounded-full bg-black"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))
+                                }
+                            </div>
+                        ) :
+                        (
+                            <h1 className="text-2xl font-bold text-center">Data Not found!</h1>
+                        )
+                    }
+
                 </div>
 
                 {/* Vita */}
-                <div id="vita" className="bg-emerald-700 text-white flex justify-start px-10 gap-40">
+                <div id="vita" className="bg-emerald-700 text-white flex justify-start px-5 gap-40">
                     <div className="px-40 py-32">
                         <p>SUMMER 2020</p><br />
-                        <h1 className="text-5xl font-bold ">Vita Classic <br />Product</h1><br />
+                        <h1 className="text-5xl font-bold">Vita Classic <br />Product</h1><br />
                         <p className="text-xs">We know how large objects will act, We know <br />
                             how are objects will act, We know</p><br />
                         <div className="flex gap-6 items-center">
                             <h1><b>$16.48</b></h1>
-                            <button className="px-6 py-2 rounded-md text-xs bg-green-500">ADD TO CART</button>
+                            <button className="px-6 py-2 rounded-md text-xs bg-green-500 ">ADD TO CART</button>
                         </div>
                     </div>
-                    <img className="h-80 scale-150 mt-[8.85%]" src="/vita men.png" alt="" />
+                    <img className="h-80 scale-150 mt-[8.5%]" src="/vita men.png" alt="" />
 
                 </div>
 
 
                 {/* Universe Section */}
-                <div id="universe" className="flex justify-center gap-20">
+                <div id="universe" className="flex justify-center gap-20 pt-8">
 
                     <div>
                         <img src="universe.png" width={400} alt="" />
@@ -186,8 +242,7 @@ export default function Home() {
                 </div>
 
             </div>
-            <Footer/>
+            <Footer />
         </>
     )
 }
-
